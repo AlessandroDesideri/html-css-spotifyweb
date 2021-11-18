@@ -20,11 +20,11 @@ body{
     clear: both;
 }
 
-
 /* Page Cont */
 .page-container{
     height: calc(100vh - 130px);
     display: flex;
+    width: 100%;
 }
 
 
@@ -38,6 +38,11 @@ body{
 
 .hovered{
     border-left: 4px #ADFF2F solid;
+}
+
+.side-menu img{
+    width: 30px;
+    vertical-align: middle;
 }
 
 .side-logo img{
@@ -54,13 +59,32 @@ body{
     text-transform: uppercase;
 }
 
+.playlist div .add-playlist{
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 20px;
+    top: 50%;
+    left: 50%;
+}
+
+.add-playlist{
+    background: #A3A3A3;
+    font-size: 50px;
+    font-weight: 700;
+    color: black;
+    line-height: 50px;
+    text-align: center;
+}
+
 /* Main MusicBox and Upgrade */
 .music-box{
-    width: calc(100% - 130px);
+    width: 100%;
     height: 100%;
     background: #141922;
     overflow-y: scroll;
-    padding-top: 100px;
+    padding-top: 130px;
 }
 
 nav .logo{
@@ -68,15 +92,71 @@ nav .logo{
     top: 0;
     background: #000000;
     opacity: 0.5;
-    width: 100%;
-    height: 100px;
+    width: calc(100% - 250px);
+    height: 130px;
 }
 
+.container-upgrade{
+    position: relative;
+}
+
+.upgrade-button{
+    position: absolute;
+    border: 3px #FFFFFF solid;
+    display: inline-block;
+    padding: 15px 50px;
+    border-radius: 30px;
+    right: 25px;
+    top: 25px;
+}
+
+.upgrade-button p{
+    text-transform: uppercase;
+}
+
+.main-bar{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    line-height: 30px;
+}
+
+.main-bar span{
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 500;
+    margin:10px;
+}
+
+.main-bar .hovered-1:hover{
+    border-bottom: 3px #ADFF2F solid;
+}
+
+.recently-played,
+.for-you,
+.popular-artist{
+    padding-left: 20px;
+}
+
+.album-container{
+    display: flex;
+}
+
+/* Recently Played */
+
+
+/* Per John Doe */
+
+
+/* Popular Artist */
+
 .album-box{
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
+    max-width: 150px;
     background: white;
-    margin: 20px;
+    margin: 10px;
 }
 
 
@@ -94,7 +174,7 @@ footer{
 }
 
 .left-music, .right-music{
-    background: violet;
+    background: #282828;
     height: 100%;
     width: 250px;
 }
@@ -102,7 +182,7 @@ footer{
 .play-menu{
     height: 100%;
     width: calc(100% - 500px);
-    background: chartreuse;
+    background: #282828;
     display: flex;
     align-items: center;
     min-width: calc(100% / 3);
@@ -111,7 +191,7 @@ footer{
 .mid-bar{
     height: 50px;
     width: 80%;
-    background: tomato;
+    background: #282828;
     margin: 0 auto;
 }
 
@@ -125,9 +205,12 @@ footer{
     
     .sidebar p,
     .sidebar h4,
-    .sidebar img{
-        display: none
+    .sidebar img,
+    .sidebar div{
+        display: none;
     }
 
-
-};
+    nav .logo{
+        min-width: calc(100% - 50px);
+    }
+}
