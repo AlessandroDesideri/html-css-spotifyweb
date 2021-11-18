@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+body{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+/* Float utility */
 .fl{
     float: left;
 }
@@ -14,47 +20,114 @@
     clear: both;
 }
 
-.row{
-    height: 100%;
-    width: 100%;
-}
 
-.row::after{
-    content: "";
-    display: table;
-    clear: both;
-}
-
+/* Page Cont */
 .page-container{
-    height: 100vh;
-    width: 100%;
+    height: calc(100vh - 130px);
+    display: flex;
 }
 
+
+/* Sidebar */
 .sidebar{
-    height: calc(100% - 100px);
+    height: 100%;
+    width: 250px;
+    background: #000000;
+    line-height: 40px;
+}
+
+.hovered{
+    border-left: 4px #ADFF2F solid;
+}
+
+.side-logo img{
     width: 200px;
-    background:cornflowerblue;
+    padding: 20px;
 }
 
-.logo{
-    height: 100px;
-    width: calc(100% - 200px);
-    background:chartreuse;
-    opacity: 0.6;
-    display: fixed;
-    z-index: 1001;
+.sidebar div p,
+.sidebar div h4{
+    padding-left: 20px;
 }
 
+.sidebar div h4{
+    text-transform: uppercase;
+}
+
+/* Main MusicBox and Upgrade */
 .music-box{
-    width: calc(100% - 200px);
-    height: calc(100% - 200px);
-    background: chocolate;
+    width: calc(100% - 130px);
+    height: 100%;
+    background: #141922;
+    overflow-y: scroll;
+    padding-top: 100px;
 }
 
-.music-bar{
+nav .logo{
+    position: fixed;
+    top: 0;
+    background: #000000;
+    opacity: 0.5;
     width: 100%;
     height: 100px;
-    background: chartreuse;
-    display: fixed;
-    z-index: 100;
 }
+
+.album-box{
+    height: 200px;
+    width: 200px;
+    background: white;
+    margin: 20px;
+}
+
+
+/* Footer MusicBar */
+
+footer{
+    height: 130px;
+    width: 100%;
+}
+
+.control-bar{
+    height: 130px;
+    background: #282828;
+    display: flex;
+}
+
+.left-music, .right-music{
+    background: violet;
+    height: 100%;
+    width: 250px;
+}
+
+.play-menu{
+    height: 100%;
+    width: calc(100% - 500px);
+    background: chartreuse;
+    display: flex;
+    align-items: center;
+    min-width: calc(100% / 3);
+}
+
+.mid-bar{
+    height: 50px;
+    width: 80%;
+    background: tomato;
+    margin: 0 auto;
+}
+
+/* Responsive Mobile */
+
+@media screen and (max-width: 575px){
+
+    .sidebar{
+        width: 50px;
+    }
+    
+    .sidebar p,
+    .sidebar h4,
+    .sidebar img{
+        display: none
+    }
+
+
+};
